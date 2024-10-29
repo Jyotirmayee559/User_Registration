@@ -1,0 +1,16 @@
+{% extends 'dummy.html' %}
+
+{% block title%}
+    <title>Verify_OTP</title>
+{% endblock%}
+
+{% block body_block %}
+    <center>
+        <h1>OTP Verify</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="otp" placeholder="Enter OTP" required>
+            <button type="Submit">Verify OTP</button>
+        </form>
+    </center>
+{% endblock %}
